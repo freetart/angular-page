@@ -1,0 +1,23 @@
+.btn {
+  padding: 1rem;
+  width: 50%;
+  border-radius: 0.5rem;
+  outline: 0;
+  border: 0.1rem solid color(whiteColor);
+  color: color(whiteColor);
+  font-size: size(md);
+  font-family: "Open Sans", sans-serif;
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: all 0.3s;
+
+  @include response(md) {
+    width: 80%;
+  }
+
+  &:hover {
+    background-color: color(whiteColor);
+    color: color(lightBlueColor);
+  }
+}

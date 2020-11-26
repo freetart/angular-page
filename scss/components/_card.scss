@@ -1,0 +1,49 @@
+.card {
+  @include flexLayout();
+  flex-direction: row;
+  width: 50rem;
+  height: 15vh;
+  margin: 0 auto;
+  padding: 5rem;
+  border-radius: 2rem;
+  transition: all 0.5s;
+
+  @include response(sm) {
+    width: 80%;
+    height: 5vh;
+    border: 1px solid #f2f2f2;
+  }
+
+  &:hover {
+    box-shadow: -0.1rem -0.1rem 2rem #919191;
+    transform: scale(1.1);
+  }
+
+  img {
+    width: 8rem;
+    margin-right: 2rem;
+
+    @include response(sm) {
+      width: 5rem;
+    }
+  }
+
+  h3 {
+    @include headingStyles();
+    font-size: size(lg);
+    color: color(darkBlueColor);
+
+    @include response(sm) {
+      font-size: size(sm);
+    }
+  }
+
+  p {
+    font-size: size(xs);
+    color: color(textColor);
+
+    @include response(sm) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.header {
+  position: relative;
+  height: 60vh;
+  background: linear-gradient(
+    to right,
+    color(darkBlueColor),
+    color(lightBlueColor)
+  );
+  box-shadow: 0.1rem 0.1rem 1rem #919191;
+}
+
+.navigation-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .logo {
+    img {
+      width: 20rem;
+      height: auto;
+
+      @include response(sm) {
+        width: 15rem;
+      }
+    }
+  }
+
+  .navigation-links {
+    display: flex;
+
+    @include response(xl) {
+      display: none;
+    }
+
+    li {
+      font-size: size(sm);
+      margin-right: 2rem;
+    }
+
+    a {
+      color: color(whiteColor);
+      transition: color 0.3s;
+
+      &:hover {
+        color: darken(color(whiteColor), 20%);
+      }
+    }
+  }
+
+  .navigation-social-search {
+    display: flex;
+    align-items: center;
+
+    @include response(sm) {
+      display: none;
+    }
+
+    input {
+      padding: 0.7rem;
+      border-radius: 1rem;
+      border: 0;
+      outline: 0;
+      font-size: size(xs);
+    }
+
+    i {
+      font-size: size(md);
+      margin-left: 1rem;
+    }
+
+    a {
+      color: color(whiteColor);
+      transition: color 0.3s;
+
+      &:hover {
+        color: darken(color(whiteColor), 20%);
+      }
+    }
+  }
+}

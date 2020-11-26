@@ -1,0 +1,48 @@
+.features {
+  @include sectionSpacing();
+  margin-top: 10rem;
+
+  @include response(xxl) {
+    margin-top: 0;
+  }
+
+  .feature {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    padding: 4rem;
+
+    @include response(md) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .feature img {
+      width: 100%;
+      height: auto;
+    }
+
+    h4 {
+      @include headingStyles();
+      font-size: size(lg);
+      color: color(darkBlueColor);
+    }
+
+    p {
+      font-size: size(xs);
+      color: color(textColor);
+      margin: 1rem 0;
+      width: 90%;
+      line-height: 1.6;
+
+      @include response(md) {
+        width: 100%;
+      }
+    }
+  }
+
+  .feature:nth-child(4) {
+    border-bottom: 0;
+  }
+}

@@ -1,0 +1,71 @@
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  @include response(lg) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
+  }
+
+  @include response(md) {
+    margin-top: 6rem;
+  }
+
+  @include response(sm) {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 15rem;
+  }
+
+  .hero-title {
+    margin-bottom: 10rem;
+
+    @include response(lg) {
+      margin-bottom: 0;
+    }
+  }
+
+  .hero-img img {
+    width: 60rem;
+    height: auto;
+
+    @include response(xxl) {
+      width: 50rem;
+    }
+
+    @include response(lg) {
+      width: 40rem;
+    }
+
+    @include response(md) {
+      width: 100%;
+    }
+
+    @include response(sm) {
+      display: none;
+    }
+  }
+
+  h2 {
+    @include headingStyles();
+    font-size: size(xl) + 2rem;
+    width: 100%;
+    color: color(whiteColor);
+    margin-bottom: 1rem;
+
+    @include response(xxl) {
+      font-size: size(xl) + 1rem;
+    }
+
+    @include response(lg) {
+      font-size: size(xl);
+    }
+
+    @include response(md) {
+      font-size: size(lg);
+    }
+  }
+}

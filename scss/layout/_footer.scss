@@ -1,0 +1,54 @@
+.footer {
+  background: linear-gradient(
+    to right,
+    color(darkBlueColor),
+    color(lightBlueColor)
+  );
+  margin-top: 5rem;
+
+  .footer-top {
+    @include sectionSpacing();
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+
+    @include response(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include response(sm) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    h3 {
+      @include headingStyles();
+      font-size: size(md);
+      color: color(whiteColor);
+
+      @include response(md) {
+        margin-top: 2rem;
+      }
+    }
+
+    li {
+      font-size: size(xs);
+      margin: 1rem 0;
+    }
+
+    a {
+      color: color(whiteColor);
+      transition: color 0.3s;
+
+      &:hover {
+        color: darken(color(whiteColor), 20%);
+      }
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: size(xs);
+    color: color(whiteColor);
+  }
+}
