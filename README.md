@@ -1,1 +1,1 @@
-# angular web page made with scss (HabibDev)
+angular web page made with scss (HabibDev)
